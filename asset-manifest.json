@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/anton-sergeenkov/Reactflow-App/static/css/main.2fb3562f.css",
-    "main.js": "/anton-sergeenkov/Reactflow-App/static/js/main.310afdd7.js",
-    "index.html": "/anton-sergeenkov/Reactflow-App/index.html",
-    "static/media/rectangle.svg": "/anton-sergeenkov/Reactflow-App/static/media/rectangle.2e178f3a0b290bce7d6251858f70a0f3.svg",
-    "static/media/rhombus.svg": "/anton-sergeenkov/Reactflow-App/static/media/rhombus.0315eabaab0678232dc9c117521bd9dc.svg",
-    "main.2fb3562f.css.map": "/anton-sergeenkov/Reactflow-App/static/css/main.2fb3562f.css.map",
-    "main.310afdd7.js.map": "/anton-sergeenkov/Reactflow-App/static/js/main.310afdd7.js.map"
+    "main.css": "/Reactflow-App/static/css/main.2fb3562f.css",
+    "main.js": "/Reactflow-App/static/js/main.c904dc71.js",
+    "index.html": "/Reactflow-App/index.html",
+    "static/media/rectangle.svg": "/Reactflow-App/static/media/rectangle.2e178f3a0b290bce7d6251858f70a0f3.svg",
+    "static/media/rhombus.svg": "/Reactflow-App/static/media/rhombus.0315eabaab0678232dc9c117521bd9dc.svg",
+    "main.2fb3562f.css.map": "/Reactflow-App/static/css/main.2fb3562f.css.map",
+    "main.c904dc71.js.map": "/Reactflow-App/static/js/main.c904dc71.js.map"
   },
   "entrypoints": [
     "static/css/main.2fb3562f.css",
-    "static/js/main.310afdd7.js"
+    "static/js/main.c904dc71.js"
   ]
 }

@@ -52,6 +52,8 @@ const App = () => {
     setEdges,
   } = useStore(useShallow(selector));
 
+  console.log("nodes", nodes);
+
   return (
     <div className={styles.appWrapper}>
       <div className={styles.canvasWrapper}>
@@ -72,6 +74,10 @@ const App = () => {
         </ReactFlow>
       </div>
       <FigureControls nodes={nodes} setNodes={setNodes} />
+
+      <pre>
+        <code>{JSON.stringify(nodes, "", 4)}</code>
+      </pre>
     </div>
   );
 };

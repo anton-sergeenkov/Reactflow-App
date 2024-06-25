@@ -1,6 +1,6 @@
 .wrapper {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   position: relative;
   display: flex;
   font-size: var(--font-node-text);
@@ -29,4 +29,20 @@
   position: relative;
   z-index: 2;
   text-align: center;
+}
+.input {
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+  text-align: center;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #000;
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 100px;
 }

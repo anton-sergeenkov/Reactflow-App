@@ -1,4 +1,4 @@
-import { BaseEdge, getSmoothStepPath } from "reactflow";
+import { BaseEdge, getStraightPath } from "reactflow";
 
 // getBezierPath
 // getSimpleBezierPath
@@ -8,7 +8,7 @@ import { BaseEdge, getSmoothStepPath } from "reactflow";
 const CustomEdge = (props) => {
   const { id, sourceX, sourceY, targetX, targetY } = props;
 
-  const [edgePath] = getSmoothStepPath({
+  const [edgePath] = getStraightPath({
     sourceX,
     sourceY,
     targetX,

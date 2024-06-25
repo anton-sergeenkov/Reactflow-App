@@ -2,22 +2,15 @@ import { useCallback } from "react";
 import cn from "classnames";
 import styles from "./styles.module.css";
 import Handlers from "../components/Handlers";
-
 import useStore from "../../../store/store";
-
-// useStore
-// useStoreApi
 
 const NodeRectangleInput = (props) => {
   const { data, isConnectable, id, selected } = props;
 
-  const updateNodeColor = useStore((state) => state.updateNodeLabel);
-  // const nodes = useStore((state) => state.nodes);
-
-  console.log(nodes);
+  const updateNodeLabel = useStore((state) => state.updateNodeLabel);
 
   const onChange = useCallback((evt) => {
-    updateNodeColor(id, evt.target.value);
+    updateNodeLabel(id, evt.target.value);
   }, []);
 
   return (

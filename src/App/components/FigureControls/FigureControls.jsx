@@ -21,23 +21,23 @@ const FigureControls = (props) => {
 
   const CONFIG_CONTROLS = [
     // { type: "", name: "Default", data: { label: "Default" }, icon: null },
+    // {
+    //   type: "nodeRectangle",
+    //   name: "Rectangle",
+    //   data: { label: "Text" },
+    //   icon: iconRectangle,
+    // },
     {
-      type: "nodeRectangle",
+      type: "nodeRectangleInput",
       name: "Rectangle",
-      data: { label: "Rectangle" },
+      data: { label: "Text" },
       icon: iconRectangle,
     },
     {
       type: "nodeRhombus",
       name: "Rhombus",
-      data: { label: "Rhombus" },
+      data: { label: "Text" },
       icon: iconRhombus,
-    },
-    {
-      type: "nodeRectangleInput",
-      name: "Rect Input",
-      data: { label: "Rect Input" },
-      icon: null,
     },
   ];
 

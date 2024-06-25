@@ -18,6 +18,9 @@ import NodeRectangleInput from "./customNodes/NodeRectangleInput/NodeRectangleIn
 import CustomEdge from "./customEdges/CustomEdge";
 // import CustomEdgeButton from "./customEdges/CustomEdgeButton";
 
+import { useShallow } from "zustand/react/shallow";
+import useStore from "../store/store";
+
 const nodeTypes = {
   nodeRectangle: NodeRectangle,
   nodeRhombus: NodeRhombus,
@@ -28,22 +31,26 @@ const edgeTypes = {
   "custom-edge": CustomEdge,
 };
 
-const App = () => {
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
-  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+const selector = (state) => ({
+  nodes: state.nodes,
+  edges: state.edges,
+  onNodesChange: state.onNodesChange,
+  onEdgesChange: state.onEdgesChange,
+  onConnect: state.onConnect,
+  setNodes: state.setNodes,
+  setEdges: state.setEdges,
+});
 
-  const onConnect = useCallback(
-    (connection) => {
-      const edge = {
-        ...connection,
-        type: "custom-edge",
-        // type: "smoothstep",
-        // label: "Hello",
-      };
-      setEdges((eds) => addEdge(edge, eds));
-    },
-    [setEdges]
-  );
+const App = () => {
+  const {
+    nodes,
+    edges,
+    onNodesChange,
+    onEdgesChange,
+    onConnect,
+    setNodes,
+    setEdges,
+  } = useStore(useShallow(selector));
 
   return (
     <div className={styles.appWrapper}>
@@ -51,11 +58,12 @@ const App = () => {
         <ReactFlow
           nodes={nodes}
           edges={edges}
-          nodeTypes={nodeTypes}
-          edgeTypes={edgeTypes}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
+          // fitView
+          nodeTypes={nodeTypes}
+          edgeTypes={edgeTypes}
           deleteKeyCode="Delete"
         >
           <Background variant="dots" gap={12} size={1} />

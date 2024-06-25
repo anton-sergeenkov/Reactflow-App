@@ -3,21 +3,22 @@ import cn from "classnames";
 import styles from "./styles.module.css";
 import Handlers from "../components/Handlers";
 
+import useStore from "../../../store/store";
+
 // useStore
 // useStoreApi
 
 const NodeRectangleInput = (props) => {
   const { data, isConnectable, id, selected } = props;
 
-  const onChange = useCallback((evt) => {
-    // console.log(evt.target.value);
-  }, []);
+  const updateNodeColor = useStore((state) => state.updateNodeLabel);
+  // const nodes = useStore((state) => state.nodes);
 
-  const onClick = () => {
-    // store.setState({
-    //   ...store.getState(),
-    // });
-  };
+  console.log(nodes);
+
+  const onChange = useCallback((evt) => {
+    updateNodeColor(id, evt.target.value);
+  }, []);
 
   return (
     <div className={cn(styles.wrapper, selected ? styles.selected : "")}>
@@ -27,13 +28,12 @@ const NodeRectangleInput = (props) => {
       <Handlers position="right" isConnectable={isConnectable} id={id} />
 
       <input
-        id="text"
         name="text"
         onChange={onChange}
-        className="nodrag"
+        // "nodrag"
+        className={cn(styles.input, "nodrag")}
         placeholder={data.label}
       />
-      <button onClick={onClick}>Click</button>
     </div>
   );
 };

@@ -1,0 +1,13 @@
+.buttonRemove {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: all;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+}

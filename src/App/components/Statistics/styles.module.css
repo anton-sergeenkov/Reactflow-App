@@ -3,16 +3,19 @@
   width: 400px;
 }
 .code {
-  border: 1px solid #2b2b2b;
+  border: 1px solid #c9c9c9;
   border-radius: 3px;
   padding: 10px;
   margin: 0;
   height: 300px;
   overflow: auto;
+  background-color: #f9f9f9;
+  font-size: 12px;
 }
 .header {
   margin: 0;
   padding: 0;
+  color: #2b2b2b;
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 500;

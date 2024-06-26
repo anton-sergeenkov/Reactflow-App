@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Reactflow-App/static/css/main.45731096.css",
+    "main.css": "/Reactflow-App/static/css/main.573a91ce.css",
     "main.js": "/Reactflow-App/static/js/main.a8013044.js",
     "static/media/clean.svg": "/Reactflow-App/static/media/clean.6189c8ceb672a4d6f00df40081bc7e36.svg",
     "static/media/rectangle.svg": "/Reactflow-App/static/media/rectangle.a2b5a470921f9ba850d27651a90d24bc.svg",
     "index.html": "/Reactflow-App/index.html",
     "static/media/remove.svg": "/Reactflow-App/static/media/remove.5fb1d194a8ec1e9a75afddd663248153.svg",
     "static/media/rhombus.svg": "/Reactflow-App/static/media/rhombus.de22bae5b2fd57718652085300518445.svg",
-    "main.45731096.css.map": "/Reactflow-App/static/css/main.45731096.css.map",
+    "main.573a91ce.css.map": "/Reactflow-App/static/css/main.573a91ce.css.map",
     "main.a8013044.js.map": "/Reactflow-App/static/js/main.a8013044.js.map"
   },
   "entrypoints": [
-    "static/css/main.45731096.css",
+    "static/css/main.573a91ce.css",
     "static/js/main.a8013044.js"
   ]
 }

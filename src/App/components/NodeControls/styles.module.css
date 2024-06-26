@@ -10,8 +10,9 @@
   height: 50px;
   padding: 10px;
   cursor: pointer;
-  border: 1px solid #2b2b2b;
+  border: 1px solid #94b2ff;
   border-radius: 3px;
+  background-color: #edf2fc;
 }
 .control img {
   width: 100%;

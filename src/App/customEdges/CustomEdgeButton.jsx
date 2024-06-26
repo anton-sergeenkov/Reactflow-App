@@ -11,13 +11,14 @@ import iconRemove from "./img/remove.svg";
 const CustomEdgeButton = (props) => {
   const { id, sourceX, sourceY, targetX, targetY } = props;
 
-  const { setEdges } = useReactFlow();
   const [edgePath, labelX, labelY] = getStraightPath({
     sourceX,
     sourceY,
     targetX,
     targetY,
   });
+
+  const { setEdges } = useReactFlow();
 
   return (
     <>

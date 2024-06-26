@@ -9,7 +9,7 @@ import NodeRhombus from "./customNodes/NodeRhombus/NodeRhombus";
 import NodeRectangle from "./customNodes/NodeRectangle/NodeRectangle";
 
 import CustomEdge from "./customEdges/CustomEdge";
-// import CustomEdgeButton from "./customEdges/CustomEdgeButton";
+import CustomEdgeButton from "./customEdges/CustomEdgeButton";
 
 import { useShallow } from "zustand/react/shallow";
 import useStore from "../store/store";
@@ -20,7 +20,8 @@ const nodeTypes = {
 };
 
 const edgeTypes = {
-  "custom-edge": CustomEdge,
+  // "custom-edge": CustomEdge,
+  "custom-edge": CustomEdgeButton,
 };
 
 const selector = (state) => ({
@@ -63,7 +64,7 @@ const App = () => {
           <MiniMap nodeStrokeWidth={3} zoomable pannable />
         </ReactFlow>
       </div>
-      <NodeControls nodes={nodes} setNodes={setNodes} />
+      <NodeControls />
       <Statistics />
     </div>
   );

@@ -1,11 +1,16 @@
 import iconRhombus from "./img/rhombus.svg";
 import iconRectangle from "./img/rectangle.svg";
+import iconClean from "./img/clean.svg";
+
 import styles from "./styles.module.css";
+import useStore from "../../../store/store";
 
 let counter = 0;
 
-const NodeControls = (props) => {
-  const { nodes, setNodes } = props;
+const NodeControls = () => {
+  const nodes = useStore((state) => state.nodes);
+  const setNodes = useStore((state) => state.setNodes);
+  const setEdges = useStore((state) => state.setEdges);
 
   const onClickNode = (typeAttr, dataAttr) => {
     const id = "node-" + counter;
@@ -19,7 +24,7 @@ const NodeControls = (props) => {
     counter++;
   };
 
-  const CONFIG_CONTROLS = [
+  const CONFIG_NODE_CONTROLS = [
     {
       type: "nodeRectangle",
       name: "Rectangle",
@@ -34,9 +39,15 @@ const NodeControls = (props) => {
     },
   ];
 
+  const onClickClean = () => {
+    setNodes([]);
+    setEdges([]);
+    counter = 0;
+  };
+
   return (
     <div className={styles.controlsWrapper}>
-      {CONFIG_CONTROLS.map((item, index) => (
+      {CONFIG_NODE_CONTROLS.map((item, index) => (
         <button
           key={index}
           className={styles.control}
@@ -49,6 +60,10 @@ const NodeControls = (props) => {
           )}
         </button>
       ))}
+
+      <button className={styles.control} onClick={() => onClickClean()}>
+        <img src={iconClean} alt="Clean" title="Clean" />
+      </button>
     </div>
   );
 };

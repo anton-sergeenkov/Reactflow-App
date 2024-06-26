@@ -12,7 +12,7 @@ const NodeControls = (props) => {
     const data = {
       id: id,
       type: typeAttr,
-      position: { x: 100, y: 100 },
+      position: { x: counter * 10 + 10, y: counter * 10 + 10 },
       data: dataAttr,
     };
     setNodes([...nodes, data]);

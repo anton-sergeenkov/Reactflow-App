@@ -1,4 +1,4 @@
-import ReactFlow, { Background, Controls } from "reactflow";
+import ReactFlow, { Background, Controls, MiniMap } from "reactflow";
 import "reactflow/dist/style.css";
 import styles from "./styles.module.css";
 
@@ -60,7 +60,7 @@ const App = () => {
         >
           <Background variant="dots" gap={12} size={1} />
           <Controls />
-          {/* <MiniMap nodeStrokeWidth={3} zoomable pannable /> */}
+          <MiniMap nodeStrokeWidth={3} zoomable pannable />
         </ReactFlow>
       </div>
       <NodeControls nodes={nodes} setNodes={setNodes} />

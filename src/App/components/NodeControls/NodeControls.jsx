@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 
 let counter = 0;
 
-const FigureControls = (props) => {
+const NodeControls = (props) => {
   const { nodes, setNodes } = props;
 
   const onClickNode = (typeAttr, dataAttr) => {
@@ -60,4 +60,4 @@ const FigureControls = (props) => {
   );
 };
 
-export default FigureControls;
+export default NodeControls;

@@ -1,15 +1,9 @@
-import { useCallback } from "react";
-import ReactFlow, {
-  addEdge,
-  useEdgesState,
-  useNodesState,
-  Background,
-  Controls,
-  MiniMap,
-} from "reactflow";
+import ReactFlow, { Background, Controls } from "reactflow";
 import "reactflow/dist/style.css";
 import styles from "./styles.module.css";
-import FigureControls from "./components/FigureControls/FigureControls";
+
+import NodeControls from "./components/NodeControls/NodeControls";
+import Statistics from "./components/Statistics/Statistics";
 
 import NodeRectangle from "./customNodes/NodeRectangle/NodeRectangle";
 import NodeRhombus from "./customNodes/NodeRhombus/NodeRhombus";
@@ -52,8 +46,6 @@ const App = () => {
     setEdges,
   } = useStore(useShallow(selector));
 
-  console.log("nodes", nodes);
-
   return (
     <div className={styles.appWrapper}>
       <div className={styles.canvasWrapper}>
@@ -73,11 +65,8 @@ const App = () => {
           {/* <MiniMap nodeStrokeWidth={3} zoomable pannable /> */}
         </ReactFlow>
       </div>
-      <FigureControls nodes={nodes} setNodes={setNodes} />
-
-      <pre>
-        <code>{JSON.stringify(nodes, "", 4)}</code>
-      </pre>
+      <NodeControls nodes={nodes} setNodes={setNodes} />
+      <Statistics />
     </div>
   );
 };

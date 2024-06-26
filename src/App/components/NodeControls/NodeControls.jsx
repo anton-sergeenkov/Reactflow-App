@@ -20,15 +20,8 @@ const NodeControls = (props) => {
   };
 
   const CONFIG_CONTROLS = [
-    // { type: "", name: "Default", data: { label: "Default" }, icon: null },
-    // {
-    //   type: "nodeRectangle",
-    //   name: "Rectangle",
-    //   data: { label: "Text" },
-    //   icon: iconRectangle,
-    // },
     {
-      type: "nodeRectangleInput",
+      type: "nodeRectangle",
       name: "Rectangle",
       data: { label: "Text" },
       icon: iconRectangle,

@@ -5,9 +5,8 @@ import styles from "./styles.module.css";
 import NodeControls from "./components/NodeControls/NodeControls";
 import Statistics from "./components/Statistics/Statistics";
 
-import NodeRectangle from "./customNodes/NodeRectangle/NodeRectangle";
 import NodeRhombus from "./customNodes/NodeRhombus/NodeRhombus";
-import NodeRectangleInput from "./customNodes/NodeRectangleInput/NodeRectangleInput";
+import NodeRectangle from "./customNodes/NodeRectangle/NodeRectangle";
 
 import CustomEdge from "./customEdges/CustomEdge";
 // import CustomEdgeButton from "./customEdges/CustomEdgeButton";
@@ -16,9 +15,8 @@ import { useShallow } from "zustand/react/shallow";
 import useStore from "../store/store";
 
 const nodeTypes = {
-  nodeRectangle: NodeRectangle,
   nodeRhombus: NodeRhombus,
-  nodeRectangleInput: NodeRectangleInput,
+  nodeRectangle: NodeRectangle,
 };
 
 const edgeTypes = {

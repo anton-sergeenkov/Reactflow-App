@@ -1,6 +1,7 @@
 .appWrapper {
   font-family: sans-serif;
   display: flex;
+  margin: 20px;
 }
 
 .canvasWrapper {

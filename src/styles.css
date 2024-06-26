@@ -8,15 +8,24 @@
   --border-radius-node: 3px;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+a[href="https://reactflow.dev"]
+{
+  display: none;
+}
+
 .react-flow__handle {
   width: 7px !important;
   height: 7px !important;
   border: 1px solid #052efc !important;
   border-radius: 2px !important;
   background-color: #fff !important;
-}
-
-a[href="https://reactflow.dev"]
-{
-  display: none;
 }

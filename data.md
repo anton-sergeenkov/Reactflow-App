@@ -29,7 +29,7 @@ export default CustomEdge;
 
 ---
 
-### Line Style
+### Edge Styles
 
 ```jsx
 const connectionLineStyle = { stroke: "#c4c4c4" };
@@ -59,7 +59,7 @@ const edgeOptions = {
 
 ---
 
-### Handle
+### <Handle />
 
 ```jsx
 const handleStyle = { left: 50, background: "blue" };
@@ -82,34 +82,6 @@ const onConnect = useCallback(
   (connection) => setEdges((eds) => addEdge(connection, eds)),
   [setEdges]
 );
-```
-
----
-
-### Input
-
-```jsx
-import { useCallback } from "react";
-
-const ElementInput = (props) => {
-  const { data, isConnectable, id } = props;
-
-  const onChange = useCallback((evt) => {
-    console.log(evt.target.value);
-  }, []);
-
-  return <input type="text" onChange={onChange} />;
-};
-
-export default ElementInput;
-```
-
----
-
-### ReactFlow
-
-```jsx
-<ReactFlow fitView />
 ```
 
 ---

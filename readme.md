@@ -1,5 +1,11 @@
 # Readme
 
+## Stack
+- React
+- TypeScript
+- React Flow
+- Zustand
+
 ## ⭐️ Links
 - Repo: https://github.com/anton-sergeenkov/Reactflow-App/
 - Page: https://anton-sergeenkov.github.io/Reactflow-App/

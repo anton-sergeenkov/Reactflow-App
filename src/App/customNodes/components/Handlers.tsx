@@ -1,41 +1,47 @@
 import { Handle, Position } from "reactflow";
 
-const Handlers = (props) => {
+interface IHandlersProps {
+  position: Position;
+  isConnectable: boolean;
+  id: string;
+}
+
+const Handlers: React.FC<IHandlersProps> = (props) => {
   const { position, isConnectable, id } = props;
 
   switch (position) {
-    case "top":
+    case Position.Top:
       return (
         <Handle
           type="target"
-          position={Position.Top}
+          position={position}
           isConnectable={isConnectable}
           id={id + "-top"}
         />
       );
-    case "bottom":
+    case Position.Bottom:
       return (
         <Handle
           type="source"
-          position={Position.Bottom}
+          position={position}
           isConnectable={isConnectable}
           id={id + "-bottom"}
         />
       );
-    case "left":
+    case Position.Left:
       return (
         <Handle
           type="source"
-          position={Position.Left}
+          position={position}
           isConnectable={isConnectable}
           id={id + "-left"}
         />
       );
-    case "right":
+    case Position.Right:
       return (
         <Handle
           type="target"
-          position={Position.Right}
+          position={position}
           isConnectable={isConnectable}
           id={id + "-right"}
         />

@@ -1,4 +1,6 @@
-const data = [
+import { Node } from "reactflow";
+
+export const data: Node[] = [
   {
     id: "1",
     type: "input",

@@ -8,7 +8,15 @@ import cn from "classnames";
 import styles from "./styles.module.css";
 import iconRemove from "./img/remove.svg";
 
-const CustomEdgeButton = (props) => {
+interface ICustomEdgeButtonProps {
+  id: string;
+  sourceX: number;
+  sourceY: number;
+  targetX: number;
+  targetY: number;
+}
+
+const CustomEdgeButton: React.FC<ICustomEdgeButtonProps> = (props) => {
   const { id, sourceX, sourceY, targetX, targetY } = props;
 
   const [edgePath, labelX, labelY] = getStraightPath({

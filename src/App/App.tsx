@@ -1,5 +1,13 @@
-import ReactFlow, { Background, Controls, MiniMap } from "reactflow";
+import ReactFlow, {
+  Background,
+  Controls,
+  MiniMap,
+  BackgroundVariant,
+  NodeTypes,
+  EdgeTypes,
+} from "reactflow";
 import "reactflow/dist/style.css";
+
 import styles from "./styles.module.css";
 
 import NodeControls from "./components/NodeControls/NodeControls";
@@ -12,19 +20,19 @@ import CustomEdge from "./customEdges/CustomEdge";
 import CustomEdgeButton from "./customEdges/CustomEdgeButton";
 
 import { useShallow } from "zustand/react/shallow";
-import useStore from "../store/store";
+import useStore, { RFState } from "../store/store";
 
-const nodeTypes = {
+const nodeTypes: NodeTypes = {
   nodeRhombus: NodeRhombus,
   nodeRectangle: NodeRectangle,
 };
 
-const edgeTypes = {
-  // "custom-edge": CustomEdge,
-  "custom-edge": CustomEdgeButton,
+const edgeTypes: EdgeTypes = {
+  "custom-edge": CustomEdge,
+  "custom-edge-button": CustomEdgeButton,
 };
 
-const selector = (state) => ({
+const selector = (state: RFState) => ({
   nodes: state.nodes,
   edges: state.edges,
   onNodesChange: state.onNodesChange,
@@ -34,15 +42,15 @@ const selector = (state) => ({
   setEdges: state.setEdges,
 });
 
-const App = () => {
+const App: React.FC = () => {
   const {
     nodes,
     edges,
     onNodesChange,
     onEdgesChange,
     onConnect,
-    setNodes,
-    setEdges,
+    // setNodes,
+    // setEdges,
   } = useStore(useShallow(selector));
 
   return (
@@ -59,7 +67,7 @@ const App = () => {
           edgeTypes={edgeTypes}
           deleteKeyCode="Delete"
         >
-          <Background variant="dots" gap={12} size={1} />
+          <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
           <Controls />
           <MiniMap nodeStrokeWidth={3} zoomable pannable />
         </ReactFlow>

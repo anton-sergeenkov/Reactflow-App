@@ -5,7 +5,15 @@ import { BaseEdge, getStraightPath } from "reactflow";
 // getSmoothStepPath
 // getStraightPath
 
-const CustomEdge = (props) => {
+interface ICustomEdgeProps {
+  id: string;
+  sourceX: number;
+  sourceY: number;
+  targetX: number;
+  targetY: number;
+}
+
+const CustomEdge: React.FC<ICustomEdgeProps> = (props) => {
   const { id, sourceX, sourceY, targetX, targetY } = props;
 
   const [edgePath] = getStraightPath({

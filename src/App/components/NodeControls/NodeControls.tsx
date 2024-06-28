@@ -1,18 +1,21 @@
 import iconRhombus from "./img/rhombus.svg";
 import iconRectangle from "./img/rectangle.svg";
 import iconClean from "./img/clean.svg";
-
+import type { ICustomNodeCommonDataProps } from "../../customNodes/types";
 import styles from "./styles.module.css";
 import useStore from "../../../store/store";
 
 let counter = 0;
 
-const NodeControls = () => {
+const NodeControls: React.FC = () => {
   const nodes = useStore((state) => state.nodes);
   const setNodes = useStore((state) => state.setNodes);
   const setEdges = useStore((state) => state.setEdges);
 
-  const onClickNode = (typeAttr, dataAttr) => {
+  const onClickNode = (
+    typeAttr: string,
+    dataAttr: ICustomNodeCommonDataProps
+  ) => {
     const id = "node-" + counter;
     const data = {
       id: id,

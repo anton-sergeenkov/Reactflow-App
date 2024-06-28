@@ -25,7 +25,7 @@ const Statistics: React.FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      <h4 className={styles.header}>Nodes12</h4>
+      <h4 className={styles.header}>Nodes</h4>
       <pre className={styles.code}>
         <code>{JSON.stringify(nodesData, undefined, 4)}</code>
       </pre>
